@@ -48,7 +48,7 @@ class Validation {
         if (empty($title)) {
             Validation::$errors['3'] = 'Comment field is required';
         } else if (!$valid) {
-            Validation::$errors['3'] = 'Comment field can only consist of letters and numbers, between 2-1000 symbols.';
+            Validation::$errors['3'] = 'Comment field must contain between 2-1000 symbols.';
         } else {
             Validation::$errors['3'] = '';
         }

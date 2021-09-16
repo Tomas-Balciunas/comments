@@ -5,6 +5,5 @@
     <link rel="shortcut icon" href="#">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="view/css/styles.css">
     <script type="text/javascript" src="view/script/vue.js"></script>
 </head>
