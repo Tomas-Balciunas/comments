@@ -39,7 +39,7 @@
                         <div class="inputs">
                             <textarea name="replyComment" id="replyComment" placeholder="Comment*"></textarea>
                         </div>
-                            <input type="hidden" name="commentID" id="commentID" :value="e.id">
+                            <input type="hidden" name="commentid" id="commentid" :value="e.id">
                             <div class="inputs">
                             <button type="submit" name="submitReply" id="submitReply">Submit</button>
                             </div>
@@ -48,7 +48,7 @@
                     </div>
 
                     <template v-for="(k, index) in replies">
-                        <template v-if="e.id == k.commentID">
+                        <template v-if="e.id == k.commentid">
                             <div class="replies">
                                 <span class="username">{{k.username}}</span>
                                 <span class="timestamp">{{k.time}}</span>

@@ -34,7 +34,7 @@ class Tasks
     }
 
     public function createReply($task) {
-        $this->commentID = $task['commentID'];
+        $this->commentid = $task['commentid'];
         $this->name = $task['replyName'];
         $this->email = $task['replyEmail'];
         $this->comment = $task['replyComment'];
@@ -43,10 +43,10 @@ class Tasks
 
     public function postReply() {
         try {
-            $query = "INSERT INTO orca.replies (commentID, username, email, comment)
+            $query = "INSERT INTO orca.replies (commentid, username, email, comment)
             VALUES (:val1, :val2, :val3, :val4)";
             $stmt = $this->pdo->prepare($query);
-            $stmt->bindParam(':val1', $this->commentID, PDO::PARAM_STR);
+            $stmt->bindParam(':val1', $this->commentid, PDO::PARAM_STR);
             $stmt->bindParam(':val2', $this->name, PDO::PARAM_STR);
             $stmt->bindParam(':val3', $this->email, PDO::PARAM_STR);
             $stmt->bindParam(':val4', $this->comment, PDO::PARAM_STR);
